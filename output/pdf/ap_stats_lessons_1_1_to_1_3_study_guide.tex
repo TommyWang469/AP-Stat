@@ -15,6 +15,7 @@
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{needspace}
 \usepackage[hidelinks]{hyperref}
 
 \definecolor{Navy}{HTML}{15324A}
@@ -131,9 +132,9 @@ By the end, you should be able to do each task without notes.
 
 \subsection*{A focused 60-minute plan}
 \begin{tabularx}{\textwidth}{>{\bfseries\color{Teal}}p{0.75in} Y}
-0--15 min & Memorize the vocabulary and denominator rules on pages 2--5.\\
+0--15 min & Memorize the vocabulary and denominator rules in the concept section.\\
 15--30 min & Redo the two class-data worked examples without looking at the blue solutions.\\
-30--50 min & Complete the mixed practice set on pages 7--9.\\
+30--50 min & Complete the mixed practice sets without using the answer key.\\
 50--60 min & Grade with the answer key. Redo only the questions you missed.\\
 \end{tabularx}
 
@@ -332,11 +333,11 @@ Mosaic plot & Segment height is conditional percent; bar width is proportional t
 \end{tabularx}
 
 \begin{formulabox}{Mosaic plot meanings}
-\[
-\text{height}=\text{conditional proportion},\qquad
-\text{width}=\text{group's share of the sample},\qquad
-\text{area}=\text{joint share of the full sample}.
-\]
+\begin{align*}
+\text{height}&=\text{conditional proportion},\\
+\text{width}&=\text{group's share of the sample},\\
+\text{area}&=\text{joint share of the full sample}.
+\end{align*}
 If a group is twice as large, its mosaic bar is twice as wide.
 \end{formulabox}
 
@@ -377,8 +378,12 @@ The graph is misleading because \ans{the vertical axis begins above 0}, which \a
 \newpage
 \section{One-Page Memory Sheet}
 
-\begin{center}
-\begin{tabularx}{\textwidth}{>{\bfseries\color{Navy}}p{1.7in} Y}
+\noindent
+\begin{minipage}[t]{0.58\textwidth}
+\vspace{0pt}
+\scriptsize
+\renewcommand{\arraystretch}{1.03}
+\begin{tabularx}{\linewidth}{>{\bfseries\color{Navy}}p{1.33in} Y}
 \toprule
 When you see... & Think...\\
 \midrule
@@ -403,18 +408,31 @@ picture changes in height and width & area exaggerates the difference\\
 observational association & do not claim cause and effect\\
 \bottomrule
 \end{tabularx}
-\end{center}
-
-\begin{formulabox}{The four formulas worth memorizing}
-\begin{align*}
-\text{relative frequency} &= \frac{\text{category count}}{\text{total count}},\\
-\text{joint relative frequency} &= \frac{\text{one interior cell}}{\text{grand total}},\\
-\text{conditional relative frequency} &= \frac{\text{one interior cell}}{\text{total of the given group}},\\
-\text{count from a percent} &= (\text{decimal proportion})(\text{group size}).
-\end{align*}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.39\textwidth}
+\vspace{0pt}
+\begin{formulabox}{Four formulas to memorize}
+\small
+\textbf{Relative frequency}
+\[
+\frac{\text{category count}}{\text{total count}}
+\]
+\textbf{Joint relative frequency}
+\[
+\frac{\text{one interior cell}}{\text{grand total}}
+\]
+\textbf{Conditional relative frequency}
+\[
+\frac{\text{one interior cell}}{\text{given-group total}}
+\]
+\textbf{Count from a percent}
+\[
+(\text{decimal proportion})(\text{group size})
+\]
 \end{formulabox}
 
 \begin{trapbox}[Four last-minute checks]
+\small
 \begin{enumerate}[label=\arabic*.]
   \item Name the variable as what is recorded for each individual.
   \item Circle the words ``and,'' ``of,'' and ``given'' before choosing a denominator.
@@ -422,6 +440,7 @@ observational association & do not claim cause and effect\\
   \item Describe an association with a specific comparison in context.
 \end{enumerate}
 \end{trapbox}
+\end{minipage}
 
 \newpage
 \section{Practice Set A: Lesson 1.1}
@@ -457,6 +476,7 @@ A coach records total minutes played and points scored for every player on the c
   \item It must be retrospective because totals come from past games.
 \end{enumerate}
 
+\Needspace{1.75in}
 \subsection*{4. Writing variables precisely}
 Rewrite each vague phrase as a correctly worded variable for each individual, then classify it.
 \begin{enumerate}[label=\alph*.]
@@ -464,7 +484,7 @@ Rewrite each vague phrase as a correctly worded variable for each individual, th
   \item ``transportation'' \workline
 \end{enumerate}
 
-\newpage
+\Needspace{2.0in}
 \section{Practice Set B: Lesson 1.2}
 
 \subsection*{5. One categorical variable}
@@ -512,7 +532,7 @@ Treat grade level as the explanatory variable and after-school activity as the r
 A bar graph shows approval rates of 94\%, 96\%, and 98\%, but the vertical axis begins at 92\%. Explain why the graph is misleading and describe a correction.
 \workline
 
-\newpage
+\Needspace{2.0in}
 \section{Practice Set C: Lesson 1.3}
 
 \subsection*{9. Mosaic plot without the picture}
@@ -555,6 +575,7 @@ In a survey, 60\% of middle school students prefer Math and 40\% prefer English.
   \item What would the corresponding segments look like in a segmented bar graph?\\[0.25in]
 \end{enumerate}
 
+\Needspace{2.2in}
 \subsection*{12. Multiple choice: what must be true?}
 A mosaic plot has two bars. The bar for School A is three times as wide as the bar for School B. In both bars, the ``Yes'' segment has height 40\%. Which statement must be true?
 \begin{enumerate}[label=\Alph*)]
