@@ -125,6 +125,8 @@ By the end, you should be able to do each task without notes.
   \item Decide whether two categorical variables are associated.
   \item Read side-by-side and segmented bar graphs.
   \item Explain the height, width, and area in a mosaic plot.
+  \item Turn percentages back into counts, and counts back into a total.
+  \item Say which comparisons a graph does and does not support.
   \item Identify misleading scales and misleading pictures.
 \end{itemize}
 \end{multicols}
@@ -217,14 +219,25 @@ Pie chart & Each category's share of the whole & All slices total 100\%.\\
 \bottomrule
 \end{tabularx}
 
-\begin{formulabox}{Frequency language}
+\begin{formulabox}{Frequency language --- and how to run it backwards}
 \[
 \text{relative frequency of a category}
 =\frac{\text{frequency in that category}}{\text{total number of individuals}}
 \qquad
 \text{percent}=100\%(\text{relative frequency})
 \]
+Solve for whichever piece is missing:
+\[
+\text{count}=(\text{relative frequency})(\text{total}),
+\qquad
+\text{total}=\frac{\text{count}}{\text{relative frequency}}.
+\]
+\key{From the notes:} 9 students chose Music and Music was 30\% of the sample, so the total sampled is $\ans{9/0.30=30\text{ students}}$; a missing category count is then $30-(6+9+4+4)=\ans{7}$.
 \end{formulabox}
+
+\begin{trapbox}[Name the individuals first]
+``The 30 major league baseball teams'' are the individuals; league (categorical), stadium capacity (quantitative), wins last season (quantitative), and whether or not the team made the playoffs (categorical) are the variables. Individuals are not always people.
+\end{trapbox}
 
 \subsection{Two-way tables: choose the denominator first}
 Suppose the rows are categories of variable $A$ and the columns are categories of variable $B$.
@@ -244,7 +257,7 @@ Type & Meaning & Denominator\\
 \midrule
 Marginal & One variable only; value found in a margin & Grand total $n$\\
 Joint & Two conditions connected by ``and'' & Grand total $n$\\
-Conditional & One condition restricted by ``of,'' ``among,'' or ``given'' & Total of the given group\\
+Conditional & One condition restricted by ``of \emph{those who}\dots,'' ``among,'' or ``given'' & Total of the given group\\
 \bottomrule
 \end{tabularx}
 
@@ -254,7 +267,7 @@ P(A_1)&=\frac{a+b}{n} &&\text{marginal}\\
 P(A_1\text{ and }B_1)&=\frac{a}{n} &&\text{joint}\\
 P(A_1\mid B_1)&=\frac{a}{a+c} &&\text{conditional: denominator is all of }B_1
 \end{align*}
-The condition after ``given'' or ``of those who'' determines the denominator.
+The condition after ``given'' or ``of those who'' determines the denominator. Watch out: ``of \emph{all} the students surveyed'' is not a condition --- it just names the grand total.
 \end{formulabox}
 
 \subsection{Worked example from the class notes}
@@ -293,6 +306,42 @@ Total & 16 & 14 & 30
 
 \begin{trapbox}[Reversing the condition]
 $P(\text{Technology}\mid\text{Math})$ and $P(\text{Math}\mid\text{Technology})$ use different denominators. Read the wording before calculating.
+\end{trapbox}
+
+\subsection{The homework table you must be able to do cold}
+This CBS News table (age vs.\ preferred listening format) appears in both Lesson 1.2 homework problems. Fill in every margin \emph{before} answering anything.
+
+\begin{center}
+\begin{tabular}{l|cc|c}
+Preferred format & Age $<45$ & Age $45+$ & Total\\ \hline
+Streaming & \cellcolor{CoralLight}386 & 306 & \cellcolor{GoldLight}692\\
+Radio & 138 & 389 & \cellcolor{GoldLight}527\\
+Digital files & 124 & 109 & \cellcolor{GoldLight}233\\
+CDs & 29 & \cellcolor{CoralLight}95 & \cellcolor{GoldLight}124\\ \hline
+Total & \cellcolor{GoldLight}677 & \cellcolor{GoldLight}899 & \cellcolor{Sky}1576
+\end{tabular}
+\end{center}
+
+\begin{tabularx}{\textwidth}{>{\bfseries\color{Navy}}p{1.05in} Y >{\color{AnswerBlue}}p{1.85in}}
+\toprule
+Type & The question, word for word & Answer\\
+\midrule
+Joint & ``What percent of \emph{all} adults surveyed are 45 or older \emph{and} prefer CDs?'' & $\dfrac{95}{1576}=0.060=6.0\%$\\
+Marginal & ``What percent of \emph{all} adults surveyed prefer listening to the radio?'' & $\dfrac{138+389}{1576}=\dfrac{527}{1576}=33.4\%$\\
+Conditional & ``\emph{Of those adults that prefer streaming}, what percent are less than 45?'' & $\dfrac{386}{692}=0.558=55.8\%$\\
+Conditional & ``\emph{Of the adults less than 45}, what percent prefer streaming?'' & $\dfrac{386}{677}=0.570=57.0\%$\\
+Conditional & ``\emph{Of the adults 45 or older}, what percent prefer streaming?'' & $\dfrac{306}{899}=0.340=34.0\%$\\
+\bottomrule
+\end{tabularx}
+
+\begin{trapbox}[The same 386, three different denominators]
+$386/1576$ (joint), $386/692$ (given streaming), and $386/677$ (given age $<45$) are three different answers to three different questions. Find the phrase that names the group \emph{before} you divide: ``of all'' $\Rightarrow$ 1576; ``of those who prefer streaming'' $\Rightarrow$ 692; ``of the adults under 45'' $\Rightarrow$ 677.
+\end{trapbox}
+
+\key{Association from this table:} $57.0\%$ of adults under 45 prefer streaming, compared with only $34.0\%$ of adults 45 or older. The conditional distributions differ, so age and preferred listening format \emph{are} associated: knowing a person's age helps predict their preferred format.
+
+\begin{trapbox}[A numerator can span two cells]
+``For colleges in Texas, what proportion are private?'' with a Public / Private-nonprofit / Private-for-profit table means \emph{add both private columns} and divide by the Texas row total: $\frac{71+84}{262}=\frac{155}{262}$. Not $\frac{155}{996}$ --- the question restricts to Texas.
 \end{trapbox}
 
 \newpage
@@ -346,10 +395,9 @@ Teachers and students voted for a mascot. There were 100 teachers and 500 studen
 
 \begin{center}
 \begin{tabular}{l|ccc|c}
- & Rams & Falcons & Prairie Dogs & Total\\ \hline
+Percentages (what the graph shows) & Rams & Falcons & Prairie Dogs & Group size\\ \hline
 Teachers & 80\% & 10\% & 10\% & 100\\
-Students & 30\% & 60\% & 10\% & 500\\ \hline
-Counts & $80+150$ & $10+300$ & $10+50$ & 600\\
+Students & 30\% & 60\% & 10\% & 500\\
 \end{tabular}
 \end{center}
 
@@ -357,11 +405,42 @@ Convert each percentage to a count using
 \[
 \text{count}=(\text{conditional proportion})(\text{group size}).
 \]
-Thus the totals are \ans{230 Rams, 310 Falcons, and 60 Prairie Dogs}. The student bar should be \ans{five times as wide} as the teacher bar, and Falcons have the greatest total area.
+
+\begin{center}
+\color{AnswerBlue}
+\begin{tabular}{l|ccc|c}
+Counts & Rams & Falcons & Prairie Dogs & Total\\ \hline
+Teachers & $0.80(100)=80$ & $0.10(100)=10$ & $0.10(100)=10$ & 100\\
+Students & $0.30(500)=150$ & $0.60(500)=300$ & $0.10(500)=50$ & 500\\ \hline
+Total & \textbf{230} & \textbf{310} & \textbf{60} & 600\\
+\end{tabular}
+\end{center}
+
+If you look only at the two percentage bars, Rams (80\%) look dominant because the teacher bar is drawn the same width as the student bar. Once the group sizes are used, \ans{Falcons win the vote, 310 to 230}. The student bar should be \ans{five times as wide} as the teacher bar, and the Falcon rectangle then has the greatest total area.
+
+\begin{formulabox}{Total count across groups (Lesson 1.3 homework \#3)}
+When a mosaic plot gives conditional percentages and you know each group size, the overall count is a weighted sum:
+\[
+\text{total}=\sum_{\text{groups}}(\text{conditional proportion})(\text{group size}).
+\]
+Music class ($n=30$) had 50\% A's; the two no-music classes ($n=60$) had 30\% A's, so the number of A's overall is
+\[
+\ans{(0.50)(30)+(0.30)(60)=15+18=33\text{ students}.}
+\]
+For a single group, just multiply once: 10\% of the 60 no-music students earned an E, so $\ans{(0.10)(60)=6\text{ students}}$.
+\end{formulabox}
 
 \begin{trapbox}[Percent vs. number]
-A higher percentage does not guarantee a higher count unless the group sizes are known. In the breakfast homework, the 8--12 group had a higher percentage that sometimes skipped breakfast, but the numbers of students in the two grade groups were not given, so the larger count could not be determined.
+A higher percentage does not guarantee a higher count unless the group sizes are known. In the breakfast homework, the grades 8--12 group had the higher percentage that ``sometimes skips'' ($\approx19\%$ vs.\ $\approx16\%$), but the number of students sampled from each grade group was never given, so you \emph{cannot} say which group had more breakfast-skippers. The correct answer is ``we don't know for certain,'' with that reason stated.
 \end{trapbox}
+
+\begin{bigidea}{``Which statement MUST be true?'' --- the two reading rules}
+\begin{enumerate}[label=\arabic*.]
+  \item \key{Segmented bar graph} (all bars equal width, all 100\% tall): you may compare \emph{within} one bar, because both segments share that group's total. You may compare \emph{percentages} across bars. You may \textbf{not} compare \emph{counts} across bars \emph{from the graph alone} --- the group sizes are hidden. If the problem states the group sizes separately, multiply and compare away.
+  \item \key{Mosaic plot} (widths proportional to group size): everything above, plus you may compare \emph{areas} across bars, because area is proportional to count.
+\end{enumerate}
+So ``for high school C, more students took AP Statistics than AP Calculus'' can be read off a segmented bar graph (same bar, same denominator), while ``high school B and C enrolled the same number in AP Calculus'' cannot. And ``there are more 12th graders on football than on volleyball'' needs a \emph{mosaic} plot, where the football bar's width carries the team size.
+\end{bigidea}
 
 \subsection{Misleading graphs}
 \begin{itemize}
@@ -394,15 +473,18 @@ When you see... & Think...\\
 ``used past records/examined existing data'' & retrospective\\
 category names or labels & categorical variable\\
 measured or counted amount & quantitative variable\\
-``all students who...'' & marginal; divide by grand total\\
-``and'' & joint; divide by grand total\\
-``of,'' ``among,'' or ``given'' & conditional; divide by the given group's total\\
+``of \emph{all}'' with one category & marginal; divide by grand total\\
+``of \emph{all}'' with ``and'' & joint; divide by grand total\\
+``of \emph{those who}\dots,'' ``among,'' ``given'' & conditional; divide by that group's total\\
 same 100\% composition across groups & no association\\
 different conditional distributions & association\\
 segmented bar height & conditional relative frequency\\
 mosaic bar width & relative group size\\
 mosaic rectangle area & joint relative frequency / share of all individuals\\
 percentage but no group size & cannot automatically determine a count\\
+percentage \emph{and} group size & count $=$ (proportion)(group size)\\
+two segments in the \emph{same} bar & safe to compare; same denominator\\
+counts across \emph{different} segmented bars & not readable from the graph alone\\
 bar graph axis begins above 0 & differences are visually exaggerated\\
 picture changes in height and width & area exaggerates the difference\\
 observational association & do not claim cause and effect\\
@@ -435,7 +517,7 @@ observational association & do not claim cause and effect\\
 \small
 \begin{enumerate}[label=\arabic*.]
   \item Name the variable as what is recorded for each individual.
-  \item Circle the words ``and,'' ``of,'' and ``given'' before choosing a denominator.
+  \item Underline the group the question restricts to, then divide by \emph{that} total.
   \item Use percentages, not raw counts, to compare groups of different sizes.
   \item Describe an association with a specific comparison in context.
 \end{enumerate}
@@ -586,6 +668,67 @@ A mosaic plot has two bars. The bar for School A is three times as wide as the b
   \item The two schools have the same number of ``Yes'' responses.
 \end{enumerate}
 
+\Needspace{2.2in}
+\subsection*{13. A numerator that spans two columns}
+A survey classified 400 restaurants in three cities by type.
+\begin{center}
+\begin{tabular}{l|rrr|r}
+ & Fast food & Casual dining & Fine dining & Total\\ \hline
+City A & 60 & 45 & 15 & 120\\
+City B & 90 & 50 & 20 & 160\\
+City C & 70 & 40 & 10 & 120\\ \hline
+Total & 220 & 135 & 45 & 400
+\end{tabular}
+\end{center}
+For restaurants in City B, what proportion are sit-down restaurants (casual dining or fine dining)?
+\par\medskip
+\begin{enumerate}[label=\Alph*),itemsep=4pt]
+  \item $\dfrac{70}{400}$
+  \item $\dfrac{70}{160}$
+  \item $\dfrac{70}{180}$
+  \item $\dfrac{160}{400}$
+\end{enumerate}
+
+\Needspace{2.4in}
+\subsection*{14. Reading a segmented bar graph}
+A segmented bar graph (three equal-width bars, each 100\% tall) shows after-school job status at three schools.
+\begin{center}
+\begin{tabular}{l|cc}
+ & Has a job & Does not have a job\\ \hline
+School P & 45\% & 55\%\\
+School Q & 30\% & 70\%\\
+School R & 45\% & 55\%
+\end{tabular}
+\end{center}
+Which statement \emph{must} be true?
+\par\medskip
+\begin{enumerate}[label=\Alph*),itemsep=4pt]
+  \item Schools P and R have the same number of students with jobs.
+  \item At School Q, more students do not have a job than have a job.
+  \item School P has more students with jobs than School Q.
+  \item There is no association between school and job status.
+\end{enumerate}
+
+\Needspace{2.6in}
+\subsection*{15. Mosaic plot with counts}
+A mosaic plot shows the percent of students who passed a fitness test in three PE periods. Period 1 has 20 students, Period 2 has 25, and Period 3 has 35. The passing percentages are 60\%, 40\%, and 80\%.
+\begin{enumerate}[label=\alph*.]
+  \item Which bar is widest, and why?\\[0.25in]
+  \item How many students passed in all?\\[0.32in]
+  \item Is there an association between period and passing? Support your answer.\\[0.32in]
+  \item What does the area of the Period 3 / passed rectangle represent, as a percent of all students?\\[0.3in]
+\end{enumerate}
+
+\Needspace{1.9in}
+\subsection*{16. Running relative frequency backwards}
+A class recorded each student's favorite lunch: Pizza 12, Sandwich \underline{\hspace{0.4in}}, Salad 8, Other 4. Sandwiches were chosen by 40\% of the students.
+\begin{enumerate}[label=\alph*.]
+  \item How many students are in the class?\\[0.25in]
+  \item How many chose a sandwich?\\[0.25in]
+  \item Find the relative frequency for Pizza.\\[0.25in]
+  \item Name two appropriate displays for these data.\\[0.2in]
+\end{enumerate}
+
 \newpage
 \section{Answer Key and Explanations}
 
@@ -690,7 +833,37 @@ Notice that parts (c) and (d) use the same cell but different denominators.
 
 \subsection*{12. Multiple choice}
 \begin{answerbox}
-\ans{A.} The widths show that School A has three times the group size. Because both groups have the same 40\% ``Yes'' rate, School A must also have three times as many ``Yes'' responses. The identical conditional percentages indicate no association in this two-category comparison.
+\ans{A.} The widths show that School A has three times the group size. Because both groups have the same 40\% ``Yes'' rate, School A must also have three times as many ``Yes'' responses: $0.40(3n)=3\cdot0.40(n)$. (B) is false --- the rates are equal. (D) is false for the same reason as (A) is true. (C) cannot be settled: matching ``Yes'' percentages say nothing about how the other 60\% is split among the remaining response categories, so an association may still exist elsewhere in the distribution.
+\end{answerbox}
+
+\subsection*{13. A numerator that spans two columns}
+\begin{answerbox}
+\ans{B.} ``For restaurants in City B'' restricts you to the City B row, so the denominator is the row total 160, not the grand total 400. The numerator adds both sit-down columns: $\ans{\frac{50+20}{160}=\frac{70}{160}=0.4375=43.75\%}$. Choice (A) uses the wrong denominator; (C) invents a total; (D) answers a different question (the marginal share of City B).
+\end{answerbox}
+
+\subsection*{14. Reading a segmented bar graph}
+\begin{answerbox}
+\ans{B.} Within School Q's bar both segments share the same denominator, so 70\% $>$ 30\% is a valid comparison. (A) and (C) compare \emph{counts} across bars, which a segmented bar graph hides because the bars are forced to equal width. (D) is false: School Q's distribution differs from P's and R's, so there is an association.
+\end{answerbox}
+
+\subsection*{15. Mosaic plot with counts}
+\begin{answerbox}
+\begin{enumerate}[label=\alph*.]
+  \item \ans{Period 3, because bar width is proportional to group size and Period 3 has the most students (35 of the 80 total).}
+  \item \ans{$(0.60)(20)+(0.40)(25)+(0.80)(35)=12+10+28=50$ students.}
+  \item \ans{Yes. The passing rate varies from 40\% in Period 2 to 80\% in Period 3, so knowing the period helps predict whether a student passed.}
+  \item \ans{$28/80=0.35=35\%$ of all students. The rectangle's area is the joint relative frequency: students who are in Period 3 \emph{and} passed.}
+\end{enumerate}
+\end{answerbox}
+
+\subsection*{16. Running relative frequency backwards}
+\begin{answerbox}
+\begin{enumerate}[label=\alph*.]
+  \item \ans{The three known categories are $12+8+4=24$ students, which is the other $60\%$. So the total is $24/0.60=40$ students.}
+  \item \ans{$(0.40)(40)=16$ students.}
+  \item \ans{$12/40=0.30=30\%$.}
+  \item \ans{A bar graph or a pie chart (one categorical variable).}
+\end{enumerate}
 \end{answerbox}
 
 \begin{tcolorbox}[colback=Navy,colframe=Navy,arc=2mm,boxrule=0pt]
