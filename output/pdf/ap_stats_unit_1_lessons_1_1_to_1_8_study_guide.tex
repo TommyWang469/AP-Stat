@@ -96,14 +96,14 @@
 \begin{tcolorbox}[enhanced,colback=Navy,colframe=Navy,arc=3mm,boxrule=0pt,left=6mm,right=6mm,top=5mm,bottom=5mm]
 {\Huge\bfseries\color{white} AP Statistics Unit 1 Study Guide}\par
 \vspace{2pt}
-{\Large\color{Gold} Lessons 1.1--1.8: Exploring One-Variable Data}\par
+{\Large\color{Gold} Lessons 1.1--1.8: Exploring Data}\par
 \vspace{5pt}
 {\color{white}Studies $\boldsymbol{\rightarrow}$ categorical data $\boldsymbol{\rightarrow}$ quantitative distributions $\boldsymbol{\rightarrow}$ transformations}
 \end{tcolorbox}
 
 \begin{center}
 \begin{tabularx}{0.96\textwidth}{>{\bfseries\color{Navy}}p{1.28in} Y}
-Built from: & All provided notes, blank homework, and answer keys for Lessons 1.1--1.8.\\
+Built from: & The provided Lessons 1.1--1.8 materials, revised with all seven question screenshots shared on September 9, 2026.\\
 Best use: & Learn the decision rules, cover the blue worked answers, then complete the seven essential practice questions.\\
 Test goal: & Choose a correct method, calculate accurately, and interpret every result in context.\\
 \end{tabularx}
@@ -135,6 +135,37 @@ Second pass & Cover the blue answers and redo every worked example.\\
 Practice & Complete Questions 1--7. If time is short, prioritize 2, 5, 6, and 7.\\
 Final pass & Grade with the key; redo only missed parts and explain the mistake in one sentence.\\
 \end{tabularx}
+
+\newpage
+\section{Revision Map: Your Seven Questions}
+
+The earlier guide covered the main concepts, but several steps needed explicit worked examples. This revision keeps Lessons 1.1--1.8 and the original seven-question practice set, and adds a worked review of the questions you shared. The older 1.1--1.3 guide is archived; its concepts remain in this full guide.
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash\bfseries\color{Navy}}p{1.30in} Y >{\raggedright\arraybackslash}p{1.30in}}
+\toprule
+Your question & Coverage check and revision & Worked review\\
+\midrule
+Album histograms & SOCV was covered. Added ``at least'' counts and a comparison where IQRs match but ranges and SDs differ. & Page \pageref{review:albums}\\
+An eighth value & SD and resistance were covered. Added the two separate checks for unchanged range and increased SD. & Page \pageref{review:add}\\
+Raspberry weight & The z-score formulas were covered. Added the two-step method for matching standardized positions across distributions. & Page \pageref{review:fruit}\\
+Soccer dotplot & Percentiles and SD were covered. Added frequency-weighted mean, median positions, a contextual SD interpretation, and removing an extreme value. & Page \pageref{review:soccer}\\
+Employee hours & Histogram limits were mentioned. Added cumulative counts, quartile positions, and a possible IQR interval. & Page \pageref{review:histogram}\\
+Days absent & Quartiles were covered. Added converting quartile percentages into counts and a note about repeated values. & Page \pageref{review:absences}\\
+Babysitting income & Unchanged z-scores were stated. Added the cancellation proof and explained why the other choices change. & Page \pageref{review:scaling}\\
+\bottomrule
+\end{tabularx}
+
+\begin{bigidea}{What to practice first}
+Cover each worked answer and explain its method before checking it. Focus first on the employee-hours cumulative counts, the soccer frequency table, and the matching-z-score calculation. Then use the original seven practice questions to check the whole unit.
+\end{bigidea}
+
+\begin{trapbox}[Three distinctions these questions test]
+\begin{itemize}
+  \item A histogram can identify an interval containing a quartile without revealing its exact value.
+  \item Equal IQRs do not require equal ranges or standard deviations.
+  \item Adding one observation and adding a constant to every observation have different effects on SD.
+\end{itemize}
+\end{trapbox}
 
 \newpage
 \section{Lessons 1.1--1.3: Categorical Data Foundations}
@@ -217,7 +248,7 @@ From the notes, if 9 students are 30\% of a sample, then $n=9/0.30=\ans{30}$.
 \end{formulabox}
 
 \begin{trapbox}[Pie-chart check]
-You may make a pie chart only when every individual belongs to exactly one category and the category percentages cover the entire group. The percentages must add to $100\%$. If categories overlap or the total is not $100\%$, do not use a pie chart.
+You may make a pie chart only when every individual belongs to exactly one category and the categories cover the entire group. The true percentages sum to $100\%$; displayed rounded percentages may differ slightly. Overlapping or incomplete categories do not form a valid pie chart.
 \end{trapbox}
 
 \subsubsection*{Two-way tables: choose the denominator first}
@@ -438,7 +469,7 @@ Reason & low tail pulls mean left & balanced tails & high tail pulls mean right\
 \bottomrule
 \end{tabularx}
 
-For the provided rainfall data, mean $=34.94$, median $=40.5$, and $s=15.52$. Since mean $<$ median, the distribution is skewed left; the small observations pull the mean toward the left tail.
+For the provided rainfall data, mean $=34.94$, median $=40.5$, and $s=15.52$. The mean below the median supports the left skew visible in the class graph: small observations pull the mean toward the left tail. Mean versus median is a useful clue, not a proof of shape by itself.
 
 \subsection{Reasoning about SD without calculation}
 
@@ -448,7 +479,7 @@ A=\{40,45,50,55,60\},\qquad B=\{46,48,50,52,54\}
 \]
 have the same mean and median, but $A$ has the larger SD because its values are more spread out.
 
-If a value equal to the current mean is added, the mean stays the same and the SD usually decreases: the sum of squared deviations stays the same while the denominator increases.
+If one observation equal to the current mean is added, the mean stays the same and the sample SD decreases when the original SD is positive: the sum of squared deviations stays the same while the denominator increases. If all values were already equal, SD remains 0. See page \pageref{review:add} for adding an observation that keeps the range fixed but increases SD.
 
 \section{Lesson 1.6: Comparing Quantitative Data}
 
@@ -458,7 +489,7 @@ The five-number summary is
 \[
 \min,\quad Q_1,\quad \text{median},\quad Q_3,\quad \max.
 \]
-$Q_1$ is the median of the lower half and $Q_3$ is the median of the upper half, using the class convention. Each quartile section contains about 25\% of the observations, and about 50\% lie between $Q_1$ and $Q_3$.
+$Q_1$ is the median of the lower half and $Q_3$ is the median of the upper half. Sort first. Under the class convention, exclude the overall median when $n$ is odd; split evenly when $n$ is even. Average the two middle values of any half with an even number of observations. Each quartile section contains about 25\% of the observations; repeated values can make strict ``below'' or ``above'' counts differ. See pages \pageref{review:histogram} and \pageref{review:absences}.
 
 \begin{formulabox}{IQR and the $1.5\times IQR$ outlier rule}
 \[
@@ -553,7 +584,7 @@ z=\frac{65-80}{10}=\ans{-1.5}.
 Interpretation: the score of 65 is \ans{1.5 standard deviations below the mean}.
 
 \begin{bigidea}{Comparing different distributions}
-Compare relative standing with $z$-scores, not raw values. The higher $z$-score has the higher relative position. The value farther from its mean has the larger $|z|$.
+Compare standardized standing with $z$-scores: a higher $z$ is farther above its own mean in SD units. The value farther from its mean has the larger $|z|$. Across differently shaped distributions, equal z-scores need not mean equal percentiles. See page \pageref{review:fruit} for finding a raw value with a matching z-score.
 \end{bigidea}
 
 From the salary homework, a business salary of $\$72{,}000$ has
@@ -776,7 +807,7 @@ For lacrosse goals, $Q_1=6$, median $=13$, $Q_3=32$, mean $=27$, and $s=35.12$. 
   \item Quiz A has mean 80 and SD 10. Find and interpret the $z$-score for 65.
   \item Quiz B has mean 72 and SD 6. Find the $z$-score for 81. Which student has the higher relative standing: the 65 on Quiz A or the 81 on Quiz B?
   \item On Quiz A, what raw score has $z=-0.3$?
-  \item Two values have $z$-scores $1.4$ and $-2.1$. Which is at the higher percentile? Which is farther from its mean?
+  \item Two values in the same distribution have $z$-scores $1.4$ and $-2.1$. Which is at the higher percentile? Which is farther from its mean?
 \end{enumerate}
 \longwork
 
@@ -875,10 +906,305 @@ and the longest ride is 23 miles.
 \end{enumerate}
 \end{answerbox}
 
-\begin{tcolorbox}[colback=Navy,colframe=Navy,arc=2mm,boxrule=0pt]
-\centering
-{\large\bfseries\color{white} Final self-check}\par
-\color{white}Can you choose the denominator, describe with SOCV, pair center with spread, interpret a $z$-score, and transform center and spread differently? If yes, you are ready.
-\end{tcolorbox}
+\clearpage
+\section{Worked Review: Your Recent Questions}
+\subsection{Album histograms: counts and SOCV}
+\label{review:albums}
+
+For the albums in your screenshot, the frequencies are:
+\begin{center}
+\begin{tabular}{lrrrrrrrr|r}
+\toprule
+Songs per album & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & Total\\
+\midrule
+Beyonc\'e & 0 & 2 & 0 & 1 & 1 & 3 & 0 & 0 & 7\\
+Taylor Swift & 1 & 0 & 3 & 1 & 1 & 1 & 2 & 1 & 10\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{minipage}{0.48\textwidth}\centering
+\begin{tikzpicture}[x=0.48cm,y=0.43cm,font=\scriptsize]
+  \foreach \x/\h in {11/0,12/2,13/0,14/1,15/1,16/3,17/0,18/0}
+    {\draw[fill=Teal!55,draw=Navy] (\x,0) rectangle +(1,\h);}
+  \draw (11,0)--(19,0);
+  \foreach \x in {11,...,19}{\node[below] at (\x,0) {\x};}
+  \foreach \y in {0,...,3}{\node[left] at (11,\y) {\y};}
+  \node[above,font=\small\bfseries] at (15,3.4) {Beyonc\'e};
+  \node[below] at (15,-0.65) {Songs per album};
+  \node[rotate=90] at (9.8,1.5) {Albums};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}\centering
+\begin{tikzpicture}[x=0.48cm,y=0.43cm,font=\scriptsize]
+  \foreach \x/\h in {11/1,12/0,13/3,14/1,15/1,16/1,17/2,18/1}
+    {\draw[fill=Gold!65,draw=Navy] (\x,0) rectangle +(1,\h);}
+  \draw (11,0)--(19,0);
+  \foreach \x in {11,...,19}{\node[below] at (\x,0) {\x};}
+  \foreach \y in {0,...,3}{\node[left] at (11,\y) {\y};}
+  \node[above,font=\small\bfseries] at (15,3.4) {Taylor Swift};
+  \node[below] at (15,-0.65) {Songs per album};
+  \node[rotate=90] at (9.8,1.5) {Albums};
+\end{tikzpicture}
+\end{minipage}
+\end{center}
+
+\begin{bigidea}{Reading a threshold}
+\emph{At least 15} means $x\ge15$, so include 15 itself. Add the \emph{frequencies}, not the song counts: Beyonc\'e has $1+3=4$ albums; Taylor Swift has $1+1+2+1=5$. Together, \ans{$4+5=9$ albums} have at least 15 songs.
+\end{bigidea}
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+Artist & Mean & Median & SD & IQR & Range\\
+\midrule
+Beyonc\'e & 14.429 & 15 & 1.813 & $16-12=4$ & $16-12=4$\\
+Taylor Swift & 14.7 & 14.5 & 2.263 & $17-13=4$ & $18-11=7$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{answerbox}[A complete comparison in context]
+\textbf{Shape:} Beyonc\'e's song counts are concentrated at the high end with a left tail and no albums at 13 songs. Taylor Swift's distribution is roughly balanced overall, with local peaks at 13 and 17 songs.
+
+\textbf{Outliers:} Neither has outliers by the $1.5\times IQR$ rule. Beyonc\'e's fences are $12-6=6$ and $16+6=22$; Taylor Swift's are $13-6=7$ and $17+6=23$. All observations lie within their respective fences.
+
+\textbf{Center:} The medians are close: Beyonc\'e's is slightly higher, at 15 songs versus 14.5. Taylor Swift's mean is slightly higher, so name the measure being compared.
+
+\textbf{Variability:} Both IQRs are 4 songs. Taylor Swift has the larger range (7 versus 4 songs) and SD (2.263 versus 1.813 songs).
+\end{answerbox}
+
+\key{Remember:} Equal IQRs describe equal spread of the middle 50\%; the rest of the data can still produce different ranges and SDs.
+
+\clearpage
+\subsection{Adding one value: unchanged range, increased SD}
+\label{review:add}
+
+The original values are $13,23,10,3,16,5,7$, with $\bar{x}=11$ and $s\approx6.95$. The choices for an eighth value are 9, 11, 21, and 25.
+
+\begin{bigidea}{Two separate checks}
+\begin{enumerate}[label=\arabic*.]
+  \item Keep the range fixed: the new value must lie between the current minimum 3 and maximum 23, inclusive. Eliminate 25.
+  \item Check SD: adding a value close to the mean tends to reduce spread; a sufficiently distant value can increase it. Confirm using the \emph{new} mean and sample SD.
+\end{enumerate}
+\end{bigidea}
+
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule
+Added value & New mean & New range & New sample SD & Meets both conditions?\\
+\midrule
+9 & 10.75 & 20 & 6.48 & No: SD decreases\\
+11 & 11.00 & 20 & 6.44 & No: SD decreases\\
+21 & 12.25 & 20 & 7.34 & Yes\\
+25 & 12.75 & 22 & 8.12 & No: range increases\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{answerbox}
+\ans{C) 21.} The range stays $23-3=20$. The new mean is $(77+21)/8=12.25$, and
+\[
+s_{\rm new}=\sqrt{\frac{377.5}{8-1}}\approx7.34>6.95.
+\]
+Here 377.5 is the sum of squared deviations of the eight values from 12.25.
+\end{answerbox}
+
+\begin{trapbox}[One added observation is not a shift of every value]
+Appending one value changes $n$ and can change SD. Adding the same constant to \emph{every} value leaves SD unchanged. Also, \emph{above the mean} alone does not guarantee an increase in SD.
+\end{trapbox}
+
+\subsection{Quartiles into counts: days absent}
+\label{review:absences}
+
+For 300 students, $Q_1=2$, median $=3.5$, and $Q_3=6$ days. Since $75/300=25\%$, we want the statement describing one quarter of the students.
+
+The intended answer is \ans{C) more than 6 days}: the upper quarter lies above the third quartile, giving approximately $0.25(300)=75$ students.
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Region & Approximate share & Count out of 300\\
+\midrule
+Below the median & 50\% & 150\\
+Between $Q_1$ and $Q_3$ & 50\% & 150\\
+Above $Q_3$ & 25\% & 75\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\key{Precision note:} These are the question's approximate quartile interpretations. If many students have exactly 6 absences, $Q_3=6$ alone does not determine the exact number \emph{strictly above} 6. The mean does not divide the observations into fixed percentages.
+
+\clearpage
+\subsection{Soccer dotplot: percentile, mean, median, and SD}
+\label{review:soccer}
+
+Count every dot, including repeats. Check that the frequencies total the stated 24 matches.
+
+\begin{center}
+\begin{tikzpicture}[x=0.65cm,y=0.20cm,font=\scriptsize]
+  \draw[Navy] (0.6,0)--(13.5,0);
+  \foreach \x in {1,...,13}{\node[below] at (\x,0) {\x};}
+  \foreach \x/\f in {1/4,2/8,3/6,4/1,5/2,6/2,13/1}
+    {\foreach \j in {1,...,\f}{\fill[Teal] (\x,\j) circle (2.4pt);}}
+  \node[below] at (7,-1.6) {Goals scored per match};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Goals, $x$ & 1 & 2 & 3 & 4 & 5 & 6 & 13\\
+Frequency, $f$ & 4 & 8 & 6 & 1 & 2 & 2 & 1\\
+Cumulative count & 4 & 12 & 18 & 19 & 21 & 23 & 24\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{formulabox}{A mean from a frequency table}
+\[
+n=\sum f,\qquad \bar{x}=\frac{\sum(xf)}{\sum f}.
+\]
+Multiply each value by how often it occurs. Averaging only the seven distinct goal counts would give each count equal weight and produce the wrong result.
+\end{formulabox}
+
+\textbf{(a) Percentile for 4 goals.} Using the class convention of counting observations \emph{at or below} the value,
+\[
+\frac{4+8+6+1}{24}(100\%)=\frac{19}{24}(100\%)\approx\ans{79.2\%}.
+\]
+Four goals is approximately the 79th percentile: the team scored \ans{4 or fewer goals in about 79\% of its matches}. Include the match with exactly 4 goals.
+
+\textbf{(b) Mean and median.}
+\[
+\bar{x}=\frac{1(4)+2(8)+3(6)+4(1)+5(2)+6(2)+13(1)}{24}
+=\frac{77}{24}\approx\ans{3.21\text{ goals}}.
+\]
+For even $n$, average the values at positions $n/2$ and $n/2+1$. The cumulative counts show that the 12th value is 2 and the 13th is 3:
+\[
+\operatorname{median}=\frac{2+3}{2}=\ans{2.5\text{ goals}}.
+\]
+A median can be fractional even when individual observations are whole-number counts.
+
+\textbf{(c) Interpret SD.} The goals scored per match typically differ from the mean of about 3.21 goals by \ans{about 2.55 goals}.
+
+\textbf{(d) Remove 13 goals.} The SD \ans{decreases}, because the exceptionally high observation contributes a large squared distance from the mean. The remaining matches are more concentrated; the new sample SD is about \ans{1.51 goals}. Recalculate the mean and use $n=23$ if checking numerically.
+
+\clearpage
+\subsection{Histogram quartiles: what could the IQR be?}
+\label{review:histogram}
+
+The 41 employees' weekly hours are grouped into five-hour intervals. Use the \emph{cumulative frequencies} to locate ordered positions.
+
+\begin{center}
+\begin{tikzpicture}[x=0.16cm,y=0.24cm,font=\scriptsize]
+  \foreach \x/\f in {0/3,5/5,10/4,15/4,20/5,25/3,30/4,35/7,40/5,45/1}
+    {\draw[fill=Teal!45,draw=Navy] (\x,0) rectangle +(5,\f);}
+  \draw (0,0)--(50,0);
+  \foreach \x in {0,5,...,50}{\node[below] at (\x,0) {\x};}
+  \foreach \y in {0,...,7}{\node[left] at (0,\y) {\y};}
+  \node[below] at (25,-1.6) {Hours worked};
+  \node[rotate=90] at (-5,3.5) {Employees};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+Hours interval & Frequency & Cumulative count & Ordered positions\\
+\midrule
+$[0,5)$ & 3 & 3 & 1--3\\
+$[5,10)$ & 5 & 8 & 4--8\\
+\rowcolor{Sky}$[10,15)$ & 4 & 12 & 9--12\\
+$[15,20)$ & 4 & 16 & 13--16\\
+$[20,25)$ & 5 & 21 & 17--21\\
+$[25,30)$ & 3 & 24 & 22--24\\
+$[30,35)$ & 4 & 28 & 25--28\\
+\rowcolor{GoldLight}$[35,40)$ & 7 & 35 & 29--35\\
+$[40,45)$ & 5 & 40 & 36--40\\
+$[45,50]$ & 1 & 41 & 41\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{bigidea}{Locate positions before estimating values}
+\begin{enumerate}[label=\arabic*.]
+  \item The median is the 21st observation. Exclude it, leaving two halves of 20.
+  \item $Q_1$ averages the 10th and 11th observations. Both are in the $[10,15)$ interval, so $10\le Q_1<15$.
+  \item $Q_3$ averages the 31st and 32nd observations. Both are in $[35,40)$, so $35\le Q_3<40$.
+\end{enumerate}
+\end{bigidea}
+
+Using the usual bin convention shown above, the possible IQR lies between
+\[
+35-15=20\quad\text{and}\quad40-10=30,
+\qquad \ans{20<IQR<30}.
+\]
+Of the choices 15, 19, 27, and 31, only \ans{C) 27 hours} fits. For example, $Q_1=11$ and $Q_3=38$ would give $IQR=27$ and are consistent with the bins.
+
+\key{Possible versus exact:} The histogram does not prove that the IQR equals 27. Exact observations inside the intervals are hidden. Bin midpoints would give estimates, not exact quartiles.
+
+\clearpage
+\subsection{Matching z-scores: strawberries and raspberries}
+\label{review:fruit}
+
+Raspberries have mean 4.5 grams and SD 0.5 grams; strawberries have mean 15 grams and SD 1.67 grams. Find a raspberry weight with the same standardized score as a 17.5-gram strawberry.
+
+\begin{formulabox}{Transfer a standardized position between two groups}
+\[
+z=\frac{x_{\rm source}-\mu_{\rm source}}{\sigma_{\rm source}},
+\qquad
+x_{\rm target}=\mu_{\rm target}+z\sigma_{\rm target}.
+\]
+Here $\mu$ denotes a group's mean and $\sigma$ its SD. Equivalently,
+\[
+\frac{x_{\rm target}-\mu_{\rm target}}{\sigma_{\rm target}}
+=\frac{x_{\rm source}-\mu_{\rm source}}{\sigma_{\rm source}}.
+\]
+\end{formulabox}
+
+\begin{answerbox}
+The strawberry's score is
+\[
+z=\frac{17.5-15}{1.67}\approx1.497.
+\]
+It is about 1.5 SD above its own mean. Transfer that position to raspberries:
+\[
+x=4.5+\left(\frac{17.5-15}{1.67}\right)(0.5)
+\approx\ans{5.25\text{ grams}}.
+\]
+Thus the answer is \ans{A) 5.25 grams}. Keep the unrounded z-score in the calculation until the last step.
+\end{answerbox}
+
+\key{Common mistake:} The strawberry is 2.5 \emph{grams} above its mean, but the raspberry must be the same number of \emph{standard deviations} above its own mean. Use the raspberry's SD when converting back to grams.
+
+\subsection{Babysitting income: why the maximum's z-score stays fixed}
+\label{review:scaling}
+
+Akshita earns \$12 per hour, so money earned is $Y=12X$, where $X$ is hours worked. Which statistic keeps the same numerical value?
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Choice & Transformation & Unchanged?\\
+\midrule
+A: Mean & $\bar{Y}=12\bar{X}$ & Scales by 12\\
+B: Standard deviation & $s_Y=12s_X$ & Scales by 12\\
+C: First quartile & $Q_{1,Y}=12Q_{1,X}$ & Scales by 12\\
+D: Z-score of the maximum & $z_{Y,\max}=z_{X,\max}$ & Yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{answerbox}
+\ans{D) The standardized score of the maximum.} Multiplying by a positive number preserves which week is the maximum, and the factors cancel:
+\[
+z_{Y,\max}
+=\frac{12X_{\max}-12\bar{X}}{12s_X}
+=\frac{X_{\max}-\bar{X}}{s_X}
+=z_{X,\max}.
+\]
+The maximum stays the same number of standard deviations above the mean. This works for \emph{every} corresponding observation under $Y=a+bX$ with $b>0$ and nonzero SD.
+\end{answerbox}
 
 \end{document}
