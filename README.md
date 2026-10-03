@@ -1,6 +1,14 @@
 # AP Statistics
 
-## Current study guide: Lessons 1.1–1.8
+## Current study guide: Unit 2, Lessons 2.1-2.9
+
+- [Read the detailed PDF](output/pdf/ap_stats_unit_2_lessons_2_1_to_2_9_study_guide.pdf)
+- [Read or edit the Markdown guide](output/unit-2-study-guide.md)
+- [Browse all Unit 2 resources](Unit%202%20Resources/README.md)
+
+The 28-page guide covers sampling, experimental design, statistical significance, and scope of inference using all 37 PDFs and 20 screenshots added October 3, 2026. Includes worked class examples, explanations for all 20 screenshot review questions, 13 new practice problems with worked answers, and clarifications where class-key wording needs care. Original files are organized by lesson and preserved byte-for-byte; the resource inventory records their original names and hashes. No filled-in Lesson 2.8 notes key was supplied.
+
+## Unit 1 study guide: Lessons 1.1–1.8
 
 - [Read the PDF](output/pdf/ap_stats_unit_1_lessons_1_1_to_1_8_study_guide.pdf)
 - [Edit the LaTeX source](output/pdf/ap_stats_unit_1_lessons_1_1_to_1_8_study_guide.tex)
