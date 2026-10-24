@@ -1,6 +1,13 @@
 # AP Statistics
 
-## Current study guide: Unit 2, Lessons 2.1-2.9
+## Current study guide: Unit 3, Lessons 3.1-3.6
+
+- [Read the short PDF](output/pdf/ap_stats_unit_3_short_study_guide.pdf)
+- [Read or edit the Markdown guide](output/unit-3-study-guide.md)
+
+Three pages based on the six QuickNotes boxes from the October 23 materials (commit `7a21f84`). Includes highlighted golden sentences, FRQ methods, worked class examples, and common mistakes.
+
+## Unit 2 study guide: Lessons 2.1-2.9
 
 - [Read the detailed PDF](output/pdf/ap_stats_unit_2_lessons_2_1_to_2_9_study_guide.pdf)
 - [Read or edit the Markdown guide](output/unit-2-study-guide.md)
